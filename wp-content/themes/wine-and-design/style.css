@@ -1,0 +1,2292 @@
+/*
+Theme Name: Wine-and-design
+Author: Platform45
+Author URI: http://www.platform45.com/
+
+Version: 1.0
+
+
+
+-------------------------------------------------------------- */
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+/* line 2, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets */
+/* line 18, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none; }
+
+/* line 21, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 25, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider {
+  margin: 0;
+  padding: 0; }
+
+/* line 26, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 27, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block; }
+
+/* line 28, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-pauseplay span {
+  text-transform: capitalize; }
+
+/* Clearfix for the .slides element */
+/* line 31, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* line 32, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+html[xmlns] .slides {
+  display: block; }
+
+/* line 33, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+* html .slides {
+  height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 38, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.no-js .slides > li:first-child {
+  display: block; }
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 43, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: none;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1; }
+
+/* line 44, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+
+/* line 45, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.loading .flex-viewport {
+  max-height: 300px; }
+
+/* line 46, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider .slides {
+  zoom: 1; }
+
+/* line 48, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.carousel li {
+  margin-right: 5px; }
+
+/* Direction Nav */
+/* line 52, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-direction-nav {
+  *height: 0; }
+
+/* line 53, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-direction-nav a {
+  width: 30px;
+  height: 30px;
+  margin: 0px 50px 0 50px;
+  display: block;
+  background: url(images/bg_direction_nav.png) no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  text-indent: -9999px;
+  opacity: 0;
+  -webkit-transition: all .3s ease; }
+
+/* line 54, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-direction-nav .flex-next {
+  background-position: 100% 0;
+  right: -36px; }
+
+/* line 55, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-direction-nav .flex-prev {
+  left: -36px; }
+
+/* line 56, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.95;
+  right: 5px; }
+
+/* line 57, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.95;
+  left: 5px; }
+
+/* line 58, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1; }
+
+/* line 59, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0.3 !important;
+  filter: alpha(opacity=30);
+  cursor: default; }
+
+/* Control Nav */
+/* line 62, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center; }
+
+/* line 63, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+/* line 64, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
+
+/* line 65, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7); }
+
+/* line 66, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default; }
+
+/* line 68, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden; }
+
+/* line 69, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0; }
+
+/* line 70, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer; }
+
+/* line 71, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1; }
+
+/* line 72, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default; }
+
+@media screen and (max-width: 860px) {
+  /* line 75, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 0; }
+
+  /* line 76, /Users/admin/work/wine-design-website/source/stylesheets/vendor/_flexslider.css.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 0; } }
+/* line 13, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+body, html {
+  height: 100%; }
+
+/* line 16, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif; }
+
+/* line 25, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+.sticky-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -95px; }
+
+/* line 30, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+.footer {
+  height: 120px; clear: both;}
+.push {
+  height: 120px; }
+/* line 32, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+img {
+  border: none; }
+
+/* line 35, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+.wrapper, .s-home__container {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px; }
+  /* line 18, /Users/admin/work/wine-design-website/source/stylesheets/vendor/bourbon/addons/_clearfix.scss */
+  .wrapper:before, .s-home__container:before, .wrapper:after, .s-home__container:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/vendor/bourbon/addons/_clearfix.scss */
+  .wrapper:after, .s-home__container:after {
+    clear: both; }
+
+/* line 42, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+h1 , h1 a{
+  font-size: 36px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 100; }
+
+h1 a{text-decoration: none;}
+a h1{text-decoration: none;}
+a:hover h1{color: #666;}
+/* line 48, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+h1.home {
+  margin-bottom: 30px; }
+
+/* line 51, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+h2 {
+  font-size: 30px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 100; }
+
+/* line 57, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+h3 {
+  font-size: 14px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 200; }
+
+/* line 63, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+h4 {
+  font-size: 16px;
+  color: black;
+  font-weight: 200; }
+
+/* line 68, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+p {
+  font-size: 13px;
+  line-height: 22px;
+  color: #2e2e2e;
+  font-weight: normal;
+  padding: 8px 0 !important;
+  margin: 0; }
+
+/* line 76, /Users/admin/work/wine-design-website/source/stylesheets/app/_base.sass */
+a {
+  font-size: 14px;
+  color: #2e2e2e;
+  font-weight: 200;
+  text-transform: uppercase; text-decoration: none;}
+
+/* line 2, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+section.s-about .s-about__container__jhb {
+  background-image: url("images/about-img-p45.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  clear: both; }
+/* line 11, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+section.s-about .s-about__container__ct {
+  background-image: url("images/about-wine-design.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  clear: both; }
+/* line 22, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+section.s-about .about__headings {
+  background: white;
+  opacity: 0.8;
+  padding: 50px 0; }
+  /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+  section.s-about .about__headings h1 {
+    display: inline-block;
+    font-weight: 300;
+    text-align: left;
+    float: left;
+    margin: 0; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+      section.s-about .about__headings h1 {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        padding-left: 20px; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        section.s-about .about__headings h1:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+      section.s-about .about__headings h1 {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        padding-left: 20px; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        section.s-about .about__headings h1:last-child {
+          margin-right: 0; } }
+  /* line 44, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+  section.s-about .about__headings img {
+    width: auto;
+    display: inline;
+    text-align: right;
+    vertical-align: middle; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 44, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+      section.s-about .about__headings img {
+        padding-top: 20px;
+        padding-left: 20px;
+        float: left; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 44, /Users/admin/work/wine-design-website/source/stylesheets/app/_about.sass */
+      section.s-about .about__headings img {
+        padding-top: 20px;
+        padding-left: 20px;
+        float: left; } }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__border-top {
+  background: #2e2e2e;
+  height: 1px;
+  margin-bottom: 20px; }
+
+/* line 6, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__jhb {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-bottom: 50px; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__jhb:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 6, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__jhb {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      padding: 0px 30px 30px 30px;
+      margin-bottom: 0px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__jhb:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 6, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__jhb {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 30px 30px;
+      margin-bottom: 0px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__jhb:last-child {
+        margin-right: 0; } }
+
+/* line 19, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__location {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-bottom: 1px solid #2e2e2e;
+  margin: 20px 0 20px 0; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__location:last-child {
+    margin-right: 0; }
+  /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+  .contact__location h1 {
+    margin-bottom: 0;
+    text-align: left; }
+  /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+  .contact__location p {
+    padding-bottom: 30px;
+    text-align: left; }
+
+/* line 31, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__contact-details img {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: -2.35765%;
+  padding-left: 10px;
+  vertical-align: middle;
+  display: inline;
+  margin-top: 34px; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__contact-details img:last-child {
+    margin-right: 0; }
+/* line 37, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__contact-details p {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  color: black;
+  display: inline;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-top: 0 !important;
+  margin-top: 30px;
+  text-align: left; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__contact-details p:last-child {
+    margin-right: 0; }
+
+/* line 47, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__contact-details__email {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__contact-details__email:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 47, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__contact-details__email {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__contact-details__email:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 47, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__contact-details__email {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__contact-details__email:last-child {
+        margin-right: 0; } }
+
+/* line 54, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+.contact__contact-details__phone {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .contact__contact-details__phone:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 54, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__contact-details__phone {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__contact-details__phone:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 54, /Users/admin/work/wine-design-website/source/stylesheets/app/_contact.sass */
+    .contact__contact-details__phone {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .contact__contact-details__phone:last-child {
+        margin-right: 0; } }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+.blog {
+  padding: 10px 0 50px 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+    .blog {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      padding: 0 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .blog:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+    .blog {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 0 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .blog:last-child {
+        margin-right: 0; } }
+  /* line 10, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+  .blog .blog-post {
+    clear: both; }
+    /* line 13, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+    .blog .blog-post h1 {
+      text-align: left; }
+    /* line 15, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+    .blog .blog-post p {
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: left; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .blog .blog-post p:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 15, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+        .blog .blog-post p {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .blog .blog-post p:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 480px) and (max-width: 800px) {
+        /* line 15, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+        .blog .blog-post p {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 100%; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .blog .blog-post p:last-child {
+            margin-right: 0; } }
+  /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+  .blog .blog-gallery {
+    clear: both;
+    padding-top: 30px; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+      .blog .blog-gallery {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        padding-bottom: 40px; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .blog .blog-gallery:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+      .blog .blog-gallery {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        padding-bottom: 40px; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .blog .blog-gallery:last-child {
+          margin-right: 0; } }
+    /* line 32, /Users/admin/work/wine-design-website/source/stylesheets/app/_blog.sass */
+    .blog .blog-gallery img {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      display: inline-block;
+      margin-top: 5px;
+      margin-right: 5px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .blog .blog-gallery img:last-child {
+        margin-right: 0; }
+
+/* line 2, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+section.s-single-event .s-single-event__container {
+  background: #f0efef;
+  text-align: center;
+  padding: 20px;
+}
+  /* line 6, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .s-single-event__container .event-summary {
+    background-image: url("images/jhb-next-event.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    display: inline-block; }
+  /* line 16, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .s-single-event__container .single-event-summary__location {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    background: #181818;
+    border-radius: 0 0 200px 200px;
+    height: 80px;
+    width: 160px;
+    opacity: 0.7;
+    margin-right: 0;
+    margin-left: -80px;
+    text-align: center;
+    display: inline-block; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    section.s-single-event .s-single-event__container .single-event-summary__location:last-child {
+      margin-right: 0; }
+    /* line 29, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-summary__location h3 {
+      text-align: center;
+      color: white;
+      margin-top: 25px; }
+  /* line 34, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .s-single-event__container .single-event-info {
+    z-index: 10;
+    background: white;
+    border-radius: 700px;
+    height: 350px;
+    width: 350px;
+    opacity: 0.9;
+    padding: 60px 60px 0 60px;
+    display: inline-block;
+    margin-top: 100px; }
+    /* line 45, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-info h1 {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 5px;
+      font-weight: 500; }
+    /* line 50, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-info h2 {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 15px;
+      font-weight: 100; }
+    /* line 55, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-info h3 {
+      text-align: center;
+      margin: 0 0 6px 0;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 5px;
+      padding-bottom: 5px; }
+    /* line 62, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-info h4 {
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      font-size: 20px; }
+    /* line 67, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .s-single-event__container .single-event-info .button {
+      text-align: center !important;
+      display: inline-block;
+      margin-top: 15px; }
+/* line 73, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+section.s-single-event .map-container {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative; }
+  /* line 77, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .map-container .map {
+    box-shadow: 2px 2px 2px #f0efef; }
+  /* line 79, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .map-container .map-details {
+    left: 37%;
+    right: 50%;
+    background: white;
+    border-radius: 0 0 700px 700px;
+    height: 210px;
+    width: 400px;
+    opacity: 0.9;
+    padding: 10px 60px 0 60px;
+    position: absolute;
+    padding: 30px;
+    text-align: center; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 79, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+      section.s-single-event .map-container .map-details {
+        left: 0%;
+        right: 50%;
+        height: 210px;
+        width: 400px; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 79, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+      section.s-single-event .map-container .map-details {
+        left: 0%;
+        right: 50%;
+        height: 210px;
+        width: 400px; } }
+    /* line 101, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .map-container .map-details h2 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      text-transform: none;
+      font-size: 18px; }
+    /* line 106, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    section.s-single-event .map-container .map-details p {
+      padding: 0 30px;
+      margin-top: 0;
+      width: 300px;
+      text-align: center;
+      display: inline-block; }
+/* line 113, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+section.s-single-event .video-clip {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px; }
+  /* line 117, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  section.s-single-event .video-clip iframe {
+    width: 100%;
+    padding: 0 30px; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 117, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+      section.s-single-event .video-clip iframe {
+        height: 300px; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 117, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+      section.s-single-event .video-clip iframe {
+        height: 400px; } }
+
+/* line 126, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+.features {
+  text-align: left;
+  padding: 0; }
+  /* line 131, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  .features img {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px; }
+  /* line 135, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  .features .heading {
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    vertical-align: middle; }
+    /* line 139, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+    .features .heading h1 {
+      text-align: left; }
+  /* line 142, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  .features p {
+    text-align: left; }
+  /* line 144, /Users/admin/work/wine-design-website/source/stylesheets/app/_single-event.sass */
+  .features .button {
+    margin-top: 20px; }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+a.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: #2e2e2e;
+    border-radius: 5px;
+    text-transform: none;
+    font-decoration: none;
+    margin-top: 20px;
+  }
+    /* line 5, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+      /* line 14, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+      a.button:hover {
+        background: black; }
+
+/* line 20, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+.previous-event-button {
+  margin: 0;
+  background: #181818; }
+  /* line 23, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+  .previous-event-button a {
+    margin: 0;
+    text-decoration: none; }
+    /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+    .previous-event-button a .previous-event-button__info {
+      padding: 25px 0px 25px 0px;
+      width: 100%;
+      text-align: center; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+        .previous-event-button a .previous-event-button__info {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%;
+          border-bottom: 1px #2e2e2e solid;
+          padding: 25px 20px 25px 20px; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .previous-event-button a .previous-event-button__info:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 480px) and (max-width: 800px) {
+        /* line 26, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+        .previous-event-button a .previous-event-button__info {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 100%;
+          border-bottom: 1px #2e2e2e solid;
+          padding: 25px 20px 25px 20px; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .previous-event-button a .previous-event-button__info:last-child {
+            margin-right: 0; } }
+      /* line 38, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+      .previous-event-button a .previous-event-button__info:hover {
+        background: #2e2e2e; }
+      /* line 40, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+      .previous-event-button a .previous-event-button__info h1 {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        padding-left: 20px;
+        display: inline-block;
+        vertical-align: middle; }
+      /* line 48, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+      .previous-event-button a .previous-event-button__info img {
+        display: inline-block;
+        vertical-align: middle; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 52, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+  .button.blog {
+    margin-left: 30px;
+    padding: 0 20px;
+    border-bottom: none; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 52, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+  .button.blog {
+    margin-left: 30px;
+    padding: 0 20px;
+    border-bottom: none; } }
+
+/* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+.button.previous {
+  margin-top: 30px; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+    .button.previous {
+      margin-left: 30px;
+      display: inline-block;
+      text-align: left; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+    .button.previous {
+      margin-left: 30px;
+      display: inline-block;
+      text-align: left; } }
+
+/* line 72, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+.wrapper {
+  text-align: center; }
+  /* line 74, /Users/admin/work/wine-design-website/source/stylesheets/modules/_button.sass */
+  .wrapper .button.single-event {
+    display: inline-block; }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+.footer {
+  background-color: #181818;
+  padding: 40px 0px;
+  }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 8, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer{height: 300px;}
+  .footer__jhb {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .footer__jhb:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 8, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer{height: 300px;}
+  .footer__jhb {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .footer__jhb:last-child {
+      margin-right: 0; } }
+
+/* line 21, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+.footer__location {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  text-align: left;
+  display: inline-block;
+  border-right: 1px solid white; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .footer__location:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 21, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+    .footer__location {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      border-bottom: 1px solid #2e2e2e;
+      padding-bottom: 15px;
+      text-align: left; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .footer__location:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 21, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+    .footer__location {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      border-bottom: 1px solid #2e2e2e;
+      padding-bottom: 15px;
+      text-align: left; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .footer__location:last-child {
+        margin-right: 0; } }
+  /* line 36, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer__location p {
+    color: white;
+    display: inline;
+    margin: 0; }
+
+/* line 41, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+.footer__contact-details {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .footer__contact-details:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+    .footer__contact-details {
+      padding-top: 15px;
+      text-align: left; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+    .footer__contact-details {
+      padding-top: 15px;
+      text-align: left; } }
+  /* line 49, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer__contact-details img {
+    padding-left: 10px;
+    padding-right: 20px;
+    vertical-align: middle;
+    display: inline-block; }
+  /* line 54, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer__contact-details p {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0; }
+  /* line 59, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer__contact-details .email {
+    display: block;
+    float: left;
+    margin-top: -6px;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    text-align: left; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .footer__contact-details .email:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 59, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+      .footer__contact-details .email {
+        display: block;
+        float: left;
+
+        margin-right: 4.82916%;
+        width: 100%;
+        padding-top: 15px;
+        text-align: left; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .footer__contact-details .email:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 59, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+      .footer__contact-details .email {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        padding-top: 15px; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .footer__contact-details .email:last-child {
+          margin-right: 0; } }
+  /* line 69, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+  .footer__contact-details .phone {
+    display: block;
+    margin-top: -6px;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .footer__contact-details .phone:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 69, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+      .footer__contact-details .phone {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        padding-top: 15px;
+        text-align: left; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .footer__contact-details .phone:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 69, /Users/admin/work/wine-design-website/source/stylesheets/modules/_footer.sass */
+      .footer__contact-details .phone {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        padding-top: 15px;
+        text-align: left; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .footer__contact-details .phone:last-child {
+          margin-right: 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 2, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__left {
+    display: none; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 2, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__left {
+    display: none; } }
+/* line 7, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+.mainnav .mainnav__link__left a {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  display: inline;
+  vertical-align: middle;
+  height: 100px !important;
+  text-decoration: none;
+  vertical-align: middle;
+  margin: 0;
+  height: 0px;
+  padding-top: 76px;
+  float: left; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .mainnav .mainnav__link__left a:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 7, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+    .mainnav .mainnav__link__left a {
+      display: none; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 7, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+    .mainnav .mainnav__link__left a {
+      display: none; } }
+  /* line 22, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__left a:hover {
+    font-weight: 400; }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 24, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__right {
+    display: none; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 24, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__right {
+    display: none; } }
+/* line 29, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+.mainnav .mainnav__link__right a {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  display: inline;
+  vertical-align: middle;
+  height: 100px !important;
+  text-decoration: none;
+  vertical-align: middle;
+  margin: 0;
+  height: 0px;
+  padding-top: 76px;
+  padding-left: 50px;
+  float: right;
+  text-align: right; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .mainnav .mainnav__link__right a:last-child {
+    margin-right: 0; }
+  /* line 42, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__link__right a:hover {
+    font-weight: 400; }
+/* line 45, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+.mainnav .mainnav__logo {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: inline;
+  text-align: center;
+  margin: 0; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .mainnav .mainnav__logo:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 45, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+    .mainnav .mainnav__logo {
+      display: none;
+      height: auto;
+      width: auto;
+      padding: 20px 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 45, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+    .mainnav .mainnav__logo {
+      display: none;
+      margin: 0;
+      padding: 20px 0; } }
+  /* line 59, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .mainnav .mainnav__logo img {
+    vertical-align: middle;
+    display: inline;
+    padding: 20px 0 20px 35px; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 65, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__logo:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 65, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__logo:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  /* line 65, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  /* line 65, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 80, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo img {
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+    padding: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 80, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__logo img {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 92, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__left:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 92, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__left:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  /* line 92, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  /* line 92, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left a {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    height: 50px !important;
+    text-align: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__left a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left a {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    height: 50px !important;
+    text-align: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__left a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left a {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__left a {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 124, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__right:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 124, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__right:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  /* line 124, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  /* line 124, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 139, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right a {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    height: 50px !important;
+    text-align: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__right a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 139, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right a {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    height: 50px !important;
+    text-align: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .responsive.mainnav .mainnav__link__right a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  /* line 139, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right a {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  /* line 139, /Users/admin/work/wine-design-website/source/stylesheets/modules/_nav.sass */
+  .responsive.mainnav .mainnav__link__right a {
+    display: none; } }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sections.sass */
+.s-home {
+  background-color: #f0efef;
+  padding: 20px;
+  overflow: hidden; }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_features.sass */
+.features {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  padding: 20px 10px 30px 0; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .features:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_features.sass */
+    .features {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      padding: 10px 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .features:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_features.sass */
+    .features {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 10px 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .features:last-child {
+        margin-right: 0; } }
+  /* line 10, /Users/admin/work/wine-design-website/source/stylesheets/modules/_features.sass */
+  .features h1 {
+    padding-left: 0;
+    text-align: left; }
+  /* line 13, /Users/admin/work/wine-design-website/source/stylesheets/modules/_features.sass */
+  .features p {
+    padding-bottom: 20px; }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+.s-previous-events .event-summary, .event-summary {
+  background-image: url("images/jhb-next-event.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  position: relative; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary, .event-summary {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .event-summary:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary, .event-summary {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .event-summary:last-child {
+        margin-right: 0; } }
+  /* line 14, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary img, .event-summary img {
+    width: 100%;
+    position: relative;
+    z-index: 9; }
+
+/* line 21, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+a.event-summary:hover {
+  opacity: 0.8; }
+
+/* line 25, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+.s-previous-events .event-summary__details, .event-summary__details {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 10;
+  position: absolute;
+  top: 100px;
+  padding: 0 30px 0 30px;
+  border-radius: 7px;
+  text-align: center; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .event-summary__details:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 25, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary__details, .event-summary__details {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      margin-left: 0%;
+      position: relative;
+      top: 100px;
+      margin-bottom: 20px;
+      border-radius: 0 0 7px 7px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .event-summary__details:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 25, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary__details, .event-summary__details {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 0%;
+      position: relative;
+      top: 100px;
+      margin-bottom: 20px;
+      width: 100%;
+      border-radius: 0 0 7px 7px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .event-summary__details:last-child {
+        margin-right: 0; } }
+  /* line 53, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary__details h1, .event-summary__details h1 {
+    padding-top: 0px;
+    text-align: center;
+    margin-bottom: 0px; }
+  /* line 58, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary__details h2, .event-summary__details h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 300; }
+  /* line 63, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary__details h3, .event-summary__details h3 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: none;
+    font-weight: 500;
+    margin-top: 10px; }
+  /* line 72, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary__details h4, .event-summary__details h4 {
+    margin-top: 0px;
+    padding-bottom: 15px;
+    font-weight: 300; }
+
+/* line 79, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+.event-summary__location {
+  display: inline-block;
+  background: #181818;
+  border-radius: 0 0 200px 200px;
+  height: 80px;
+  width: 160px;
+  opacity: 0.7;
+  text-align: center; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .event-summary__location:last-child {
+    margin-right: 0; }
+  /* line 92, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .event-summary__location h3 {
+    text-align: center;
+    color: white;
+    margin-top: 25px; }
+
+/* line 99, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+.s-previous-events .event-summary {
+  width: 100%;
+  background: #f0efef;
+}
+  /* line 104, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+  .s-previous-events .event-summary img {
+    width: auto; }
+/* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+.s-previous-events .event-summary__details {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-left: 34.11922%; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  .s-previous-events .event-summary__details:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary__details {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      margin-left: 0%;
+      position: relative;
+      top: 0;
+      margin-bottom: 20px;
+      border-radius: 0 0 7px 7px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .s-previous-events .event-summary__details:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_events.sass */
+    .s-previous-events .event-summary__details {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 0%;
+      position: relative;
+      top: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      border-radius: 0 0 7px 7px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .s-previous-events .event-summary__details:last-child {
+        margin-right: 0; } }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+.sponsor {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #f0efef;
+  border-top: 1px solid #f0efef;
+  padding: 40px 0; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+    .sponsor {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      padding: 30px 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .sponsor:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+    .sponsor {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 30px 30px; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .sponsor:last-child {
+        margin-right: 0; } }
+  /* line 13, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+  .sponsor ul {
+    display: inline; }
+    /* line 15, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+    .sponsor ul li {
+      list-style: none;
+      display: inline; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 18, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+        .sponsor ul li a.platform45 {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%;
+          padding: 30px 30px; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .sponsor ul li a.platform45:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 480px) and (max-width: 800px) {
+        /* line 18, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+        .sponsor ul li a.platform45 {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 100%;
+          padding: 30px 30px; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .sponsor ul li a.platform45:last-child {
+            margin-right: 0; } }
+  /* line 25, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+  .sponsor .platform45 {
+    background-image: url("images/p-logo.png");
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 200px;
+    padding-right: 30px;
+    display: inline;
+    vertical-align: middle;
+    float: right; }
+    /* line 34, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+    .sponsor .platform45:hover {
+      background-image: url("images/p-logo-color.png"); }
+  /* line 36, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+  .sponsor h1 {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .sponsor h1:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 36, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+      .sponsor h1 {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        padding: 30px 0px 0 0; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .sponsor h1:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 36, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+      .sponsor h1 {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        padding: 30px 0px 0 0; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .sponsor h1:last-child {
+          margin-right: 0; } }
+  /* line 47, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+  .sponsor img.sponsor-arrow {
+    display: inline;
+    vertical-align: middle;
+    text-align: left; }
+  /* line 51, /Users/admin/work/wine-design-website/source/stylesheets/modules/_sponsor.sass */
+  .sponsor img.p-logo {
+    display: inline;
+    vertical-align: middle;
+    float: right; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    padding: 30px 30px;
+    text-display: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .featured-by:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 30px 30px;
+    text-display: center; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .featured-by:last-child {
+      margin-right: 0; } }
+/* line 10, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by h1 {
+  padding-top: 20px;
+  text-align: left; }
+/* line 13, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by ul {
+  padding: 0;
+  text-align: left; }
+  /* line 16, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by ul li {
+    list-style: none;
+    display: inline;
+    text-align: left; }
+/* line 21, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .jhblive {
+  background-image: url("images/jhblive.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 160px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 28, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .jhblive:hover {
+    background-image: url("images/jhblive-color.png"); }
+/* line 31, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .between10and5 {
+  background-image: url("images/between10and5.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 130px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 38, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .between10and5:hover {
+    background-image: url("images/between10and5-color.png"); }
+/* line 41, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .wineland {
+  background-image: url("images/wineland.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 140px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 48, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .wineland:hover {
+    background-image: url("images/wineland-color.png"); }
+/* line 51, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .bizcom {
+  background-image: url("images/bizcom.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 58, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .bizcom:hover {
+    background-image: url("images/bizcom-color.png"); }
+/* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .elle {
+  background-image: url("images/elle.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 160px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 68, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .elle:hover {
+    background-image: url("images/elle-color.png"); }
+/* line 71, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .elledeco {
+  background-image: url("images/elledeco.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 160px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 78, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .elledeco:hover {
+    background-image: url("images/elledeco-color.png"); }
+/* line 81, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .motherliving {
+  background-image: url("images/motherliving.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 88, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .motherliving:hover {
+    background-image: url("images/motherliving-color.png"); }
+/* line 91, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .stufftodo {
+  background-image: url("images/stufftodo.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 160px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 98, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .stufftodo:hover {
+    background-image: url("images/stufftodo-color.png"); }
+/* line 101, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+.featured-by .strawberry {
+  background-image: url("images/strawberry.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 160px;
+  padding-right: 20px;
+  display: inline-block; }
+  /* line 108, /Users/admin/work/wine-design-website/source/stylesheets/modules/_featured-by.sass */
+  .featured-by .strawberry:hover {
+    background-image: url("images/strawberry-color.png"); }
+
+/* line 2, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+a.event-summary img.feature-img {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  position: relative; }
+  /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+  a.event-summary img.feature-img:last-child {
+    margin-right: 0; }
+
+/* line 6, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+h1.previous-event-heading {
+  text-align: left; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 6, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    h1.previous-event-heading {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      font-size: 30px;
+      margin: 30px 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      h1.previous-event-heading:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 6, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    h1.previous-event-heading {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      font-size: 30px;
+      margin: 30px 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      h1.previous-event-heading:last-child {
+        margin-right: 0; } }
+
+/* line 17, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+.previous-event-slot {
+  background: #f0efef;
+  height: 90px;
+  padding: 20px 0;
+  clear: both;
+  margin-top: 5px;
+  vertical-align: middle; }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 17, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      height: auto;
+      padding: 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 17, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      height: auto;
+      padding: 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 33, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot .previous-event-slot-image {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      margin: 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot .previous-event-slot-image:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 33, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot .previous-event-slot-image {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      margin: 0; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot .previous-event-slot-image:last-child {
+        margin-right: 0; } }
+  /* line 48, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  .previous-event-slot .previous-event-slot-image img {
+    margin-left: 40px;
+    display: inline;
+    float: left;
+    vertical-align: middle;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;}
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 48, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-image img {
+        text-align: center;
+        float: none; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 48, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-image img {
+        text-align: center;
+        float: none; } }
+  /* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  .previous-event-slot .previous-event-slot-image img.line-arrow {
+    margin-right: 40px;
+    padding-top: 20px;
+    display: inline;
+    float: right;
+    vertical-align: middle;
+    height: auto; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-image img.line-arrow {
+        text-align: center;
+        float: none;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 40px; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 61, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-image img.line-arrow {
+        text-align: center;
+        float: none;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 40px; } }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    /* line 81, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot .previous-event-slot-info {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 100%;
+      padding-top: 0px;
+      margin: 0;
+      vertical-align: middle;
+      display: inline-block; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot .previous-event-slot-info:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    /* line 81, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot .previous-event-slot-info {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding-top: 0;
+      margin: 0;
+      display: inline-block; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot .previous-event-slot-info:last-child {
+        margin-right: 0; } }
+  /* line 93, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  .previous-event-slot .previous-event-slot-info h1 {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    display: inline;
+    padding-left: 30px;
+    vertical-align: middle;
+    margin: 0;
+    text-align: left;
+    vertical-align: middle; }
+    /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+    .previous-event-slot .previous-event-slot-info h1:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 93, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-info h1 {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        text-align: center; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .previous-event-slot .previous-event-slot-info h1:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 93, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot .previous-event-slot-info h1 {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        text-align: center; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .previous-event-slot .previous-event-slot-info h1:last-child {
+          margin-right: 0; } }
+  /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  .previous-event-slot.open {
+    height: 190px; }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open {
+        height: 370px;
+        display: inline-block; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 107, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open {
+        height: 200px;
+        display: inline-block; } }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 115, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open h1 {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%;
+        text-align: center;
+        margin: 0; }
+        /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+        .previous-event-slot.open h1:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 115, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open h1 {
+        margin: 0; } }
+    /* line 122, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot.open h3 {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      margin-left: 30px;
+      padding: 5px 0;
+      border-top: #2e2e2e solid 1px;
+      border-bottom: #2e2e2e solid 1px;
+      display: inline-block;
+      text-transform: none; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot.open h3:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 122, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+        .previous-event-slot.open h3 {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%;
+          text-align: center;
+          margin: 0; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .previous-event-slot.open h3:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 480px) and (max-width: 800px) {
+        /* line 122, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+        .previous-event-slot.open h3 {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 100%;
+          margin: 0;
+          text-align: center; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .previous-event-slot.open h3:last-child {
+            margin-right: 0; } }
+    /* line 138, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot.open h2 {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 57.35098%;
+      text-align: left;
+      margin: 0 0 0 30px;
+      font-size: 20px;
+      text-transform: none;
+      font-weight: 500; }
+      /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+      .previous-event-slot.open h2:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 138, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+        .previous-event-slot.open h2 {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 5px 0; }
+          /* line 41, /Users/admin/work/wine-design-website/source/stylesheets/vendor/neat/grid/_span-columns.scss */
+          .previous-event-slot.open h2:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 480px) and (max-width: 800px) {
+        /* line 138, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+        .previous-event-slot.open h2 {
+          margin: 0;
+          padding: 5px 0;
+          text-align: center; } }
+    /* line 154, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+    .previous-event-slot.open img.circle {
+      height: 80px;
+      height: 160px; }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        /* line 154, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+        .previous-event-slot.open img.circle {
+          text-align: center; } }
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      /* line 160, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open img.arrow {
+        text-align: center;
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+      /* line 160, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+      .previous-event-slot.open img.arrow {
+        text-align: center;
+        margin-bottom: 20px; } }
+
+/* line 171, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+a.event-summary .feature-img__jhb {
+  background-image: url("images/jhb-next-event.png");
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100% !important;
+  padding-right: 50px;
+  display: inline-block;
+  position: absolute; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 180, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  h1.previous-event-heading {
+    padding: 0 30px; } }
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  /* line 180, /Users/admin/work/wine-design-website/source/stylesheets/modules/_previous-events.sass */
+  h1.previous-event-heading {
+    padding: 0 30px; } }
+
+/* line 1, /Users/admin/work/wine-design-website/source/stylesheets/modules/_horisontal-divider-line.sass */
+.horisontal-divider-line {
+  height: 1px;
+  width: 100%;
+  background-color: #f0efef;
+  margin-bottom: 20px; }
+
+
+
+
+
+
+
+.blog .blog-post{border-bottom: 1px solid #ececec; padding: 30px 0;}
+.blog h4{text-align: left;}
+.my-thumbnail{float: left; margin-right: 30px;}
+.my-thumbnail img{border-radius: 130px;}
+.event-summary{text-align: center;}
+.featured-event .single-event-info{margin-top: 20px !important;}
+.featured-event .s-single-event__container{padding: 0 !important;}
+a:hover .previous-event-slot{opacity: 0.7;}
+.contact .map{margin-top: 40px; clear: both;}
+.blog{border-top: 1px solid #000;}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .blog .blog-post {text-align: center;}
+      .blog .blog-post p{width: 100%; float: none;}
+      .single-event-info{width: 100% !important; padding: 10px !important; border-radius: 0 !important; height: auto !important;}
+      .map-details{display: none !important;}
+     }
+    @media screen and (min-width: 480px) and (max-width: 800px) {
+       .blog .blog-post {text-align: center;}
+      .blog .blog-post p{width: 100%; float: none;}
+      .map-details{display: none !important;}
+    }
